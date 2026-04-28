@@ -1,20 +1,30 @@
+---
 schema: spec-driven
 
 # Project context (optional)
 # This is shown to AI when creating artifacts.
 # Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  Tech stack: Vue 3, Vite, Tailwind CSS, ECharts
+  Project: sdd-mvp - a network management platform (网管平台)
+  Architecture: Aggregation of Vue 3 pages for network monitoring and management
+
+  Conventions:
+  - Use Vue 3 Composition API
+  - ECharts for data visualization and charts
+  - Tailwind CSS for styling
+  - Vitest for testing
+
+  Domain: Network device monitoring, SNMP data collection, network performance dashboard
+  Primary features: Device discovery, performance metrics, alert management, network topology visualization
 
 # Per-artifact rules (optional)
 # Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Include impact analysis on existing dashboard pages
+    - Consider SNMP data freshness and polling intervals
+    - Always include testing strategy for network scenarios
+  tasks:
+    - Break implementation into UI components and data layers
+    - Include mock data for SNMP endpoints during development
